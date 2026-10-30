@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Portal</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-indigo-600 text-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid fa-cloud text-3xl"></i>
+                <h1 class="text-2xl font-bold tracking-tight">Cloud Computing Hub</h1>
+            </div>
+            <p class="text-indigo-200 text-sm mt-2 sm:mt-0">Your gateway to modern infrastructure and scalable apps</p>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-10">
+
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-indigo-500 to-blue-600 rounded-2xl p-8 text-white shadow-lg flex flex-col md:flex-row justify-between items-center">
+            <div class="space-y-4 max-w-xl">
+                <span class="bg-indigo-400/40 text-indigo-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Next-Gen Technology</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Scalable, Reliable, and Secure Cloud Solutions</h2>
+                <p class="text-indigo-100 text-sm sm:text-base">Explore the fundamental pillars of cloud architecture, service models, and modern deployment strategies.</p>
+            </div>
+            <div class="mt-6 md:mt-0 text-6xl text-indigo-200">
+                <i class="fa-solid fa-server animate-pulse"></i>
+            </div>
+        </section>
+
+        <!-- Service Models Grid -->
+        <section>
+            <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <i class="fa-solid fa-cubes text-indigo-600 mr-2"></i> Cloud Service Models
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- IaaS -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-indigo-50 text-indigo-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-hard-drive"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">IaaS (Infrastructure as a Service)</h4>
+                    <p class="text-slate-600 text-sm">Provides raw computing resources like virtual machines, storage, and networks over the internet.</p>
+                    <span class="inline-block mt-4 text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Example: AWS EC2, Google Compute Engine</span>
+                </div>
+                <!-- PaaS -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">PaaS (Platform as a Service)</h4>
+                    <p class="text-slate-600 text-sm">Offers a managed framework and environment for developers to build and deploy apps without managing servers.</p>
+                    <span class="inline-block mt-4 text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Example: Heroku, AWS Elastic Beanstalk</span>
+                </div>
+                <!-- SaaS -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-lg flex items-center justify-center text-xl mb-4">
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">SaaS (Software as a Service)</h4>
+                    <p class="text-slate-600 text-sm">Delivers ready-to-use software applications completely over the web, typically via a subscription model.</p>
+                    <span class="inline-block mt-4 text-xs font-semibold bg-slate-100 text-slate-700 px-2.5 py-1 rounded">Example: Google Workspace, Microsoft 365</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Cloud Glossary / Search -->
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="flex flex-col sm:flex-row justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-slate-900 mb-4 sm:mb-0 flex items-center">
+                    <i class="fa-solid fa-book text-indigo-600 mr-2"></i> Cloud Terminology Glossary
+                </h3>
+                <input type="text" id="searchInput" placeholder="Search a cloud term..." 
+                    class="w-full sm:w-72 px-4 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    onkeyup="filterTerms()">
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="glossaryGrid">
+                <div class="glossary-item p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <h5 class="font-bold text-indigo-600">Auto-Scaling</h5>
+                    <p class="text-xs text-slate-600 mt-1">Automatically adjusting compute resources based on real-time traffic demand.</p>
+                </div>
+                <div class="glossary-item p-4 bg-slate-50 rounded-lg border border-slate-100">
+                    <h5
